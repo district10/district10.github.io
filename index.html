@@ -41,7 +41,7 @@
         .t { color: red; }
         .z { color: green; }
         .x { color: blue; }
-        .hide { display: none; }
+        .tzx-hide { display: none; }
     </style>
 </head>
 <body>
@@ -59,19 +59,27 @@
                 district10
             </a>
         </li>
-        <li><span class="entry">Readings Notes:</span>
+        <li class="tzx-hide great"><span class="entry">Readings Notes:</span>
             <a href="http://tangzhixiong.com/readings">
                 tangzhixiong.com/readings
             </a>
         </li>
     </ul>
     <script>
+        function transform(classA, classB) {
+            var eles = document.getElementsByClassName(classA);
+            for (var i = 0; i < eles.length; i++) {
+                eles[i].className = eles[i].className.replace(classA, classB);
+            }
+        }
         document.getElementsByTagName("body")[0].onkeypress = function(evt) {
             evt = evt || window.event;
             var charCode = evt.keyCode || evt.which;
             if (false) {
             } else if (charCode == 49) { // "1"
+                transform("tzx-hide", "tzx-show");
             } else if (charCode == 48) { // "0"
+                transform("tzx-show", "tzx-hide");
             }
         };
     </script>
