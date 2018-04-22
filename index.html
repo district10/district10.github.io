@@ -49,22 +49,27 @@
     <h1 title="Don't forget to feel bad. ;)">Welcome to [<span class="t">T</span>ANG <span class="z">Z</span>hi<span class="x">X</span>iong]'s Homepage</h1>
 
     <ul>
-        <li><span class="entry">Blog:</span>
+        <li><span class="entry">Blog</span>
             <a href="http://blog.tangzhixiong.com/" title="http://tangzx.qiniudn.com/">
                 blog.tangzhixiong.com
             </a>
         </li>
-        <li><span class="entry">GitHub:</span>
+        <li><span class="entry">GitHub</span>
             <a href="http://github.com/district10" title="Q: What makes a persion great? A: Vim.">
                 district10
             </a>
         </li>
-        <li class="tzx-hide great"><span class="entry">Projects:</span>
+        <li class="tzx-hide"><span class="entry">Projects</span>
             <a href="https://github.com/district10/notes/projects">
                 https://github.com/district10/notes/projects
             </a>
         </li>
-        <li class="tzx-hide great"><span class="entry">Readings Notes:</span>
+        <li class="tzx-hide"><span class="entry">Bullet Notes</span>
+            <a href="blog.tangzhixiong.com/notes">
+                blog.tangzhixiong.com/notes
+            </a>
+        </li>
+        <li class="tzx-hide"><span class="entry">Readings Notes</span>
             <a href="http://tangzhixiong.com/readings">
                 tangzhixiong.com/readings
             </a>
@@ -72,9 +77,8 @@
     </ul>
     <script>
         function transform(classA, classB) {
-            var eles = document.getElementsByClassName(classA);
-            for (var i = 0; i < eles.length; i++) {
-                eles[i].className = eles[i].className.replace(classA, classB);
+            while(x = document.getElementsByClassName(classA)[0]) {
+                x.className = classB;
             }
         }
         document.getElementsByTagName("body")[0].onkeypress = function(evt) {
